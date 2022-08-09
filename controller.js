@@ -2,7 +2,7 @@ const db = require('./db/db')
 const axios = require('axios')
 
 class Controller {
-    async getwezer(req, res) {
+    async getweather(req, res) {
         const city = req.query.city
         let now = Date.now();
         const cortege = await db.query(`SELECT * FROM weaserdb WHERE city = $1`, [city])
