@@ -1,4 +1,4 @@
-const db = require('../server/db/db')
+const db = require('./db/db')
 const axios = require('axios')
 
 class Controller {
@@ -15,7 +15,7 @@ class Controller {
             }
         }
         try {
-            const weaser = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=dd57aac4be8cf4734addd16f8900ba36`)
+            const weaser = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={token}`)
         }
         catch (e) {
            return res.json('Error')
