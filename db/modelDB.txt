@@ -1,0 +1,6 @@
+CREATE TABLE weaserdb(
+	id SERIAL PRIMARY KEY,
+	city VARCHAR(255),
+	data VARCHAR(255),
+    time bigint
+);
